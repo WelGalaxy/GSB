@@ -21,8 +21,6 @@ namespace GSB
         {
             String login = txbLogin.Text;
             String mdp = txbMdp.Text;
-            Console.WriteLine("Login = " + login);
-            Console.Write("Mdp = " + mdp);
 
             Connexion maConnexion = new Connexion(txbLogin.Text, txbMdp.Text);
 

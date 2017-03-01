@@ -20,7 +20,6 @@ namespace GSB
 
         private void TestInfoConnexion(String login,String mdp)
         {
-            Console.WriteLine("On envoi nos infos dans DAOConnexion");
             DAOConnexion monDAOConnexion = new DAOConnexion(login, mdp);
             monDAOConnexion.testInfoConnexion(login, mdp);
             

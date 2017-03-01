@@ -9,7 +9,8 @@ namespace GSB
     class DAOConnexion
     {
        String login;
-        String mdp;
+       String mdp;
+        String requeteSql;
 
         public DAOConnexion(String login,String mdp)
         {
@@ -19,8 +20,9 @@ namespace GSB
 
         public void testInfoConnexion(String login, String mdp)
         {
-            Console.WriteLine("on crée un objet dao factory");
-            DAOFactory objet = new DAOFactory();
+            requeteSql = "SELECT Mdp FROM comptes WHERE Login = '" + login+"'";
+            DAOFactory monObjet = new DAOFactory();
+            monObjet.execSqlRead(requeteSql);
             
         }
     }
